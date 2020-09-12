@@ -41,8 +41,7 @@ document.addEventListener('DOMContentLoaded', e => {
         //Control de botón up
         posicionScroll = window.pageYOffset;
 
-        console.log(posicionScroll);
-        
+     
         //Control del header
         
         if(scrollY > 150) {
@@ -62,10 +61,83 @@ document.addEventListener('DOMContentLoaded', e => {
             btnUp.removeEventListener('click', controlBtnUp)
         }
 
-        
+            
 
     })
+
+    // ** FADE OUT FUNCTION **
+    function fadeOut(el) {
+        el.style.opacity = 1;
+        (function fade() {
+            if ((el.style.opacity -= .1) < 0) {
+                el.style.display = "none";
+            } else {
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
+
+    fadeOut(document.querySelector('.dropdown-menu'))
+ 
+
+    // ** FADE IN FUNCTION **
+    function fadeIn(el, display) {
+        el.style.opacity = 0;
+        el.style.display = display || "block";
+        (function fade() {
+            var val = parseFloat(el.style.opacity);
+            if (!((val += .1) > 1)) {
+                el.style.opacity = val;
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
+
+    function scaleIn(el) {
+        let scale = 0;
+        (function fade() {
+            
+            if ( !((scale += .1) > 1) ) {
+                
+                document.querySelector(el).style.transform = 'scale('+ parseFloat(scale) +')'
+                requestAnimationFrame(fade);
+                
+            } 
+
+        })(); 
+    }
+
+    function scaleOut(el) {
+        let scale = 1;
+        (function fade() {
+            console.log( scale -= .1 );
+
+            if ( !((scale -= .1) < 0) ) {
+                
+                document.querySelector(el).style.transform = 'scale('+ parseFloat(scale) +')'
+                requestAnimationFrame(fade);
+
+            } 
+
+        })(); 
+    }
+
     
+    
+    
+    $('.dropdown').on('show.bs.dropdown', function () {
+        
+        scaleIn('.dropdown-menu')
+        fadeIn(document.querySelector('.dropdown-menu'), 'block')
+        // do something...
+    })
+    
+    $('.dropdown').on('hide.bs.dropdown', function () {
+        scaleOut('.dropdown-menu')
+        fadeOut(document.querySelector('.dropdown-menu'))
+        // do something...
+    })
+
 
 }); 
 
