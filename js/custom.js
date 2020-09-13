@@ -139,5 +139,46 @@ document.addEventListener('DOMContentLoaded', e => {
     })
 
 
+
+    const btnRight = document.querySelector('.glide__arrow--right');
+    const btnLeft = document.querySelector('.glide__arrow--left');
+
+    let actualImg = document.querySelector('.glide__slide--active').children; 
+    let selectImg = document.getElementById('img-select'); 
+
+    console.log(selectImg);
+
+    btnRight.addEventListener('click', function(e) {
+
+       console.log( document.querySelector('.glide__slide--active').style.width ); 
+       document.querySelector('.division-selector').style.width = document.querySelector('.glide__slide--active').style.width
+       fadeIn(selectImg, 'block')
+       selectImg.src = actualImg[0].src
+        
+    })
+
+    btnLeft.addEventListener('click', function(e) {
+
+        fadeIn(selectImg, 'block')
+        selectImg.src = actualImg[0].src
+        
+    })
+
+    function reportWindowSize() {
+    // heightOutput.textContent = window.innerHeight;
+    // widthOutput.textContent = window.innerWidth;
+        console.log(window.innerWidth, window.innerHeight);
+    }
+
+    window.addEventListener('resize', reportWindowSize);
+
+
+
+
+
+
+
+
+
 }); 
 

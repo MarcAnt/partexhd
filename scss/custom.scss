@@ -10,6 +10,7 @@ $font-family-sans-serif: 'Bebas Neue', cursive;
 
 $primary: #FFB800;
 $secondary: #303030; 
+$breadcrumb-bg: rgba(221,221,221,1);
 $btn-border-radius: unset !important; 
 $input-border-radius: unset !important;
 $enable-rounded: false; 
@@ -99,12 +100,15 @@ $enable-rounded: false;
 
 /* Header */
 
-header {
+
+
+.header-home{
     width: 100vw; 
     height: 120vh;
     background-image: linear-gradient(180deg, rgba(238,238,238,1) 22%, rgba(221,221,221,1) 22%);
-    
+
 }
+
 
 // .tiny-logo {
 //     display:none; 
@@ -289,6 +293,10 @@ footer {
     .tiny-logo {
         display: none !important;
     }
+
+    .flags-in-menu {
+        display: none; 
+    }
   }
   
   /* 
@@ -302,6 +310,11 @@ footer {
     .tiny-logo {
         display: none !important;
     }
+
+    .flags-in-menu {
+        display: none; 
+    }
+
   }
   
   /* 
@@ -311,7 +324,7 @@ footer {
   
   @media (min-width: 768px) and (max-width: 1024px) {
     
-    header {
+    .header-home {
         
         background-image: none !important;
         background-color: #dddddd !important;
@@ -396,16 +409,9 @@ footer {
         }
     }
 
-
-    // .division-link-horizontal {
-    //     height: .25rem;
-    //     width: 100%;
-    //     background-color: gold;
-
-       
-    // }
-
-    
+    .flags-in-menu {
+        display: none !important;
+    }
 
     /*Resumen de productos recientes*/
 
@@ -467,7 +473,7 @@ footer {
 
     .info-resumen {
         font-size: 1.2rem; 
-
+        text-align: center;
         span {
             padding: .2rem;
 
@@ -492,7 +498,7 @@ footer {
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     
      //CSS
-     header {
+     .header-home {
         
         background-image: none !important;
         background-color: #dddddd !important;
@@ -597,6 +603,9 @@ footer {
         display: none; 
     }
 
+    .flags-in-menu {
+        display: none !important;
+    }
     
 
     /*Resumen de productos recientes*/
@@ -655,7 +664,7 @@ footer {
 
     .info-resumen {
         font-size: 1.2rem; 
-
+        text-align: center;
         span {
             padding: .2rem;
 
@@ -692,7 +701,7 @@ footer {
 
     
         //CSS
-        header {
+        .header-home {
         
             background-image: none !important;
             background-color: #dddddd !important;
@@ -782,6 +791,11 @@ footer {
             background-color: gold;
         }
     
+        .flags-in-menu {
+            display: flex;
+            justify-content:center; 
+            align-items: center;
+        }
     
     
         /*Resumen de productos recientes*/
@@ -840,7 +854,7 @@ footer {
     
         .info-resumen {
             font-size: 1.2rem; 
-    
+            text-align: center;
             span {
                 padding: .2rem;
     
@@ -864,7 +878,7 @@ footer {
   @media (min-width: 320px) and (max-width: 480px) {
     
     //CSS
-    header {
+    .header-home {
         
         background-image: none !important;
         background-color: #dddddd !important;
@@ -958,6 +972,12 @@ footer {
         background-color: gold;
     }
 
+    .flags-in-menu {
+        display: flex;
+        justify-content:center; 
+        align-items: center;
+    }
+
 
 
     /*Resumen de productos recientes*/
@@ -1014,9 +1034,10 @@ footer {
         text-align: center;
     }
 
+  
     .info-resumen {
         font-size: 1.2rem; 
-
+        text-align: center; 
         span {
             padding: .2rem;
 
@@ -1040,11 +1061,85 @@ footer {
 
 
 
+  /*Description page*/
+
+  /*header*/
+
+  .header-description {
+      background-color: $primary;
+
+      nav {
+          padding-left: 0; 
+          padding-right: 0;
+      }
+  }
+
+  .breadcrumb {
+
+    margin-bottom: 0 !important;
+  }
+
+  /*description*/
+
+.description-section {
+    padding: 1.5rem 0; 
+}
+
+.title-content-description {
+    display: flex;
+}
+
+.title-content-names {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column; 
+
+    padding-left: 1rem;
+    h1, h6 {
+       
+        margin-bottom: 0; 
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+  }
+
+.division-general-description {
+    width: .4rem;
+    height: 4.35rem;
+    background-color: gold;
+}
+
+.description-content-info {
+    font-family: 'Roboto'; 
+}
+
+.donwload-content {
+    float: right; 
+    .btn-phd {
+        margin: 0;
+    }
+}
+
+.glide__arrow {
+    outline: none !important;
+    border: none; 
+    border-radius: 50%; 
+    width: 3rem;
+    height: 3rem;
+    background-color: $primary;
+    margin: .5rem;
+}
 
 
-
-
-
+.division-selector {
+    width: 110px;
+    height: .4rem;
+    background-color: $primary;
+    margin-bottom: .5rem;
+}
 
 
 
