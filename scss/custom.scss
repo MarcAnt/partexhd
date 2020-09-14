@@ -95,6 +95,18 @@ $enable-rounded: false;
     color: white !important;
 }
 
+.breadcrumb {
+    font-size: 1.5rem; 
+}
+
+.navbar-toggler {
+    border: none !important; 
+    outline: none !important; 
+}
+
+// html {
+//     scroll-behavior: smooth;
+// }
 
 
 
@@ -194,6 +206,12 @@ $enable-rounded: false;
     .card-body a {
         font-size: 1.3rem;
     }
+}
+
+
+
+.exports-info {
+    background-color: $primary; 
 }
 
 /* contact */
@@ -675,6 +693,12 @@ footer {
         }
     }
 
+    /* Estilos de Description article page */
+
+    .title-content-description {
+        padding-left: 1rem; 
+    }
+
 
   }
 
@@ -864,6 +888,12 @@ footer {
                 font-size: 1.2rem; 
             }
         }
+
+        /* Estilos de Description article page */
+
+        .title-content-description {
+            padding-left: 1rem; 
+        }
     
 
 
@@ -1049,12 +1079,13 @@ footer {
     }
 
 
+    /* Estilos de Description article page */
+
+    .title-content-description {
+        padding-left: 1rem; 
+    }
 
 
-
-
-
-    
 
 
   }
@@ -1135,7 +1166,7 @@ footer {
 
 
 .division-selector {
-    width: 110px;
+    // width: 110px;
     height: .4rem;
     background-color: $primary;
     margin-bottom: .5rem;

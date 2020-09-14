@@ -142,38 +142,52 @@ document.addEventListener('DOMContentLoaded', e => {
 
     const btnRight = document.querySelector('.glide__arrow--right');
     const btnLeft = document.querySelector('.glide__arrow--left');
-
+    const divisionBar = document.querySelector('.division-selector'); 
     let actualImg = document.querySelector('.glide__slide--active').children; 
     let selectImg = document.getElementById('img-select'); 
+    let imgOnModal = document.getElementById('imgOnModal');
 
-    console.log(selectImg);
+    /*Control del carousel del producto */
 
     btnRight.addEventListener('click', function(e) {
 
        console.log( document.querySelector('.glide__slide--active').style.width ); 
-       document.querySelector('.division-selector').style.width = document.querySelector('.glide__slide--active').style.width
        fadeIn(selectImg, 'block')
        selectImg.src = actualImg[0].src
-        
+       
     })
-
+    
     btnLeft.addEventListener('click', function(e) {
-
+        
         fadeIn(selectImg, 'block')
         selectImg.src = actualImg[0].src
         
     })
 
-    function reportWindowSize() {
-    // heightOutput.textContent = window.innerHeight;
-    // widthOutput.textContent = window.innerWidth;
-        console.log(window.innerWidth, window.innerHeight);
+
+    /* */
+    divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
+    function resizeDivison() {
+        // heightOutput.textContent = window.innerHeight;
+        // widthOutput.textContent = window.innerWidth;
+
+        console.log(document.querySelector('.glide__slide').style.height);
+        
+
+        divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
     }
 
-    window.addEventListener('resize', reportWindowSize);
+    window.addEventListener('resize', resizeDivison);
 
 
+    /*Abrir el modal*/
+    document.querySelector('.image-description').addEventListener('click', function() {
 
+        imgOnModal.src = selectImg.src
+        imgOnModal.style.width = '100%'
+       
+        $('#imageModal').modal('show')
+    })
 
 
 

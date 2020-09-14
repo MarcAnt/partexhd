@@ -74,6 +74,15 @@
   color: white !important;
 }
 
+.breadcrumb {
+  font-size: 1.5rem;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
 /* Header */
 .header-home {
   width: 100vw;
@@ -180,6 +189,10 @@
 
 .card .card-body a {
   font-size: 1.3rem;
+}
+
+.exports-info {
+  background-color: #FFB800;
 }
 
 /* contact */
@@ -598,6 +611,10 @@ footer .footer-info-text {
   .info-resumen i {
     font-size: 1.2rem;
   }
+  /* Estilos de Description article page */
+  .title-content-description {
+    padding-left: 1rem;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
@@ -776,6 +793,10 @@ footer .footer-info-text {
   .info-resumen i {
     font-size: 1.2rem;
   }
+  /* Estilos de Description article page */
+  .title-content-description {
+    padding-left: 1rem;
+  }
 }
 
 /* 
@@ -946,6 +967,10 @@ footer .footer-info-text {
   .info-resumen i {
     font-size: 1.2rem;
   }
+  /* Estilos de Description article page */
+  .title-content-description {
+    padding-left: 1rem;
+  }
 }
 
 /*Description page*/
@@ -1028,7 +1053,6 @@ footer .footer-info-text {
 }
 
 .division-selector {
-  width: 110px;
   height: .4rem;
   background-color: #FFB800;
   margin-bottom: .5rem;
