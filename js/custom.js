@@ -149,29 +149,32 @@ document.addEventListener('DOMContentLoaded', e => {
 
     /*Control del carousel del producto */
 
-    btnRight.addEventListener('click', function(e) {
+    // btnRight.addEventListener('click', function(e) {
 
-       console.log( document.querySelector('.glide__slide--active').style.width ); 
-       fadeIn(selectImg, 'block')
-       selectImg.src = actualImg[0].src
+    // //    console.log( document.querySelector('.glide__slide--active').style.width ); 
+    //    fadeIn(selectImg, 'block')
+    //    selectImg.src = actualImg[0].src
        
-    })
+    // })
     
-    btnLeft.addEventListener('click', function(e) {
+    // btnLeft.addEventListener('click', function(e) {
         
-        fadeIn(selectImg, 'block')
-        selectImg.src = actualImg[0].src
+    //     fadeIn(selectImg, 'block')
+    //     selectImg.src = actualImg[0].src
         
-    })
+    // })
 
 
     /* */
-    divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
+    // divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
+   
+
+
     function resizeDivison() {
         // heightOutput.textContent = window.innerHeight;
         // widthOutput.textContent = window.innerWidth;
 
-        console.log(document.querySelector('.glide__slide').style.height);
+        // console.log(document.querySelector('.glide__slide').style.height);
         
 
         divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
@@ -180,14 +183,14 @@ document.addEventListener('DOMContentLoaded', e => {
     window.addEventListener('resize', resizeDivison);
 
 
-    /*Abrir el modal*/
-    document.querySelector('.image-description').addEventListener('click', function() {
+    /*Abrir el modal para la descripcion del artículo */
+    // document.querySelector('.image-description').addEventListener('click', function() {
 
-        imgOnModal.src = selectImg.src
-        imgOnModal.style.width = '100%'
+    //     imgOnModal.src = selectImg.src
+    //     imgOnModal.style.width = '100%'
        
-        $('#imageModal').modal('show')
-    })
+    //     $('#imageModal').modal('show')
+    // })
 
 
 

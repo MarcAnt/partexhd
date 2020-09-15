@@ -187,6 +187,17 @@ $enable-rounded: false;
     }
 }
 
+.info-slide {
+    height: 30rem; 
+
+    p {
+        font-family: 'Roboto';
+        font-size: 1.15rem;
+        padding: 1rem; 
+        margin: 5rem; 
+    }
+}
+
 /* section resumen */
 
 .card {
@@ -212,6 +223,7 @@ $enable-rounded: false;
 
 .exports-info {
     background-color: $primary; 
+    background-image: url('../img/map.png'); 
 }
 
 /* contact */
@@ -315,6 +327,10 @@ footer {
     .flags-in-menu {
         display: none; 
     }
+
+    .division-link-horizontal {
+        display: none; 
+    }
   }
   
   /* 
@@ -331,6 +347,20 @@ footer {
 
     .flags-in-menu {
         display: none; 
+    }
+
+    .division-link-horizontal {
+        display: none;
+    }
+
+    .info-slide {
+        height: 30rem; 
+    }
+
+    .content-intro {
+        h1 {
+            font-size: 3rem; 
+        }
     }
 
   }
@@ -557,7 +587,7 @@ footer {
 
         h1 {
             text-align: center; 
-            font-size: 3rem;
+            font-size: 2.5rem;
             padding:0;
         }
         a {
@@ -623,6 +653,10 @@ footer {
 
     .flags-in-menu {
         display: none !important;
+    }
+
+    .info-slide {
+        height: 18.1rem; 
     }
     
 
@@ -711,6 +745,10 @@ footer {
 
     .division-link-horizontal {
         display: none; 
+    }
+
+    .info-slide {
+        height: 25rem; 
     }
 
   }

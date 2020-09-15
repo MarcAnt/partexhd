@@ -169,6 +169,17 @@
   font-size: 2.5rem !important;
 }
 
+.info-slide {
+  height: 30rem;
+}
+
+.info-slide p {
+  font-family: 'Roboto';
+  font-size: 1.15rem;
+  padding: 1rem;
+  margin: 5rem;
+}
+
 /* section resumen */
 .card {
   border-radius: unset !important;
@@ -193,6 +204,7 @@
 
 .exports-info {
   background-color: #FFB800;
+  background-image: url("../img/map.png");
 }
 
 /* contact */
@@ -287,6 +299,9 @@ footer .footer-info-text {
   .flags-in-menu {
     display: none;
   }
+  .division-link-horizontal {
+    display: none;
+  }
 }
 
 /* 
@@ -299,6 +314,15 @@ footer .footer-info-text {
   }
   .flags-in-menu {
     display: none;
+  }
+  .division-link-horizontal {
+    display: none;
+  }
+  .info-slide {
+    height: 30rem;
+  }
+  .content-intro h1 {
+    font-size: 3rem;
   }
 }
 
@@ -491,7 +515,7 @@ footer .footer-info-text {
   }
   .content-intro h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
   }
   .content-intro a {
@@ -555,6 +579,9 @@ footer .footer-info-text {
   }
   .flags-in-menu {
     display: none !important;
+  }
+  .info-slide {
+    height: 18.1rem;
   }
   /*Resumen de productos recientes*/
   .title-content {
@@ -623,6 +650,9 @@ footer .footer-info-text {
   }
   .division-link-horizontal {
     display: none;
+  }
+  .info-slide {
+    height: 25rem;
   }
 }
 
