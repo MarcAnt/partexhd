@@ -180,6 +180,15 @@ input[type="text"], input[type="email"], textarea {
 .info-slide {
   height: 30rem;
   background-image: url("../img/partex1.jpg");
+  background-size: cover;
+  background-repeat: no-repea p;
+  background-repeat-position: absolute;
+  background-repeat-top: 25%;
+  background-repeat-z-index: 20;
+  background-repeat-font-family: 'Roboto';
+  background-repeat-font-size: 1.15rem;
+  background-repeat-padding: 1rem;
+  background-repeat-margin: 2rem;
 }
 
 .info-slide .overlay {
@@ -188,16 +197,6 @@ input[type="text"], input[type="email"], textarea {
   left: 0;
   top: 0;
   z-index: 10;
-}
-
-.info-slide p {
-  position: absolute;
-  top: 25%;
-  z-index: 20;
-  font-family: 'Roboto';
-  font-size: 1.15rem;
-  padding: 1rem;
-  margin: 2rem;
 }
 
 /* section resumen */

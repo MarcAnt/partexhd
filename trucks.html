@@ -33,11 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Homepage <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="index.html">Homepage <span class="sr-only">(current)</span></a>
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Articles</a>
+                      <a class="nav-link" href="articles.html">Articles</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -85,8 +85,8 @@
             <ol class="breadcrumb">
                 <div class="container d-flex justify-content-end px-0">
 
-                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Description</li>
+                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Trucks</li>
                 </div>
             </ol>
         </nav>
@@ -416,9 +416,8 @@
 
     <div class="overlay-load bg-primary w-100 h-100" style="display: flex; justify-content: center; align-items: center; position: absolute !important; top: 0; left:0; z-index: 100 !important; overflow: hidden;" >
        
-        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-          </div>
+        <img src="img/cog.svg" class="cog" style="width: 3rem; height: 3rem;" >
+        <span class="sr-only">Loading...</span>
 
     </div>
 
@@ -454,8 +453,8 @@
 
     
     <script src="js/custom.js"></script>
-    <!-- <script src="js/glide.esm.js"></script> -->
-    <!-- <script src="js/glide.min.js"></script> -->
+    <script src="js/glide.min.js"></script>
+    <script src="js/anime.min.js"></script>
     <script>
 
         // var glide = new Glide('.glide', {
