@@ -46,11 +46,15 @@
 .title-content .division-general {
   width: .4rem;
   height: 2.6rem;
-  background-color: gold;
+  background-color: #FFB800;
 }
 
 .nav-link {
   line-height: 1 !important;
+}
+
+.nav-item {
+  letter-spacing: .11rem !important;
 }
 
 .btn-up {
@@ -81,6 +85,10 @@
 .navbar-toggler {
   border: none !important;
   outline: none !important;
+}
+
+input[type="text"], input[type="email"], textarea {
+  font-family: 'Roboto' !important;
 }
 
 /* Header */
@@ -145,13 +153,13 @@
 .division-link {
   width: .25rem;
   height: 2.5rem;
-  background-color: gold;
+  background-color: #FFB800;
 }
 
 .division-general {
   width: .25rem;
   height: 2.5rem;
-  background-color: gold;
+  background-color: #FFB800;
 }
 
 .content-social-links {
@@ -171,16 +179,38 @@
 
 .info-slide {
   height: 30rem;
+  background-image: url("../img/partex1.jpg");
+}
+
+.info-slide .overlay {
+  height: 30rem;
+  background-color: #ffb70088;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 
 .info-slide p {
+  position: absolute;
+  top: 25%;
+  z-index: 20;
   font-family: 'Roboto';
   font-size: 1.15rem;
   padding: 1rem;
-  margin: 5rem;
+  margin: 2rem;
 }
 
 /* section resumen */
+.el {
+  -webkit-transition: all .5s all;
+  transition: all .5s all;
+}
+
+.el:hover {
+  -webkit-box-shadow: 1px 1px 10px #30303033;
+          box-shadow: 1px 1px 10px #30303033;
+}
+
 .card {
   border-radius: unset !important;
   border: none !important;
@@ -205,6 +235,11 @@
 .exports-info {
   background-color: #FFB800;
   background-image: url("../img/map.png");
+}
+
+.exports-info .container .card {
+  -webkit-box-shadow: 5px 5px 10px #30303033;
+          box-shadow: 5px 5px 10px #30303033;
 }
 
 /* contact */
@@ -320,6 +355,23 @@ footer .footer-info-text {
   }
   .info-slide {
     height: 30rem;
+    background-image: url("../img/partex1.jpg");
+  }
+  .info-slide .overlay {
+    height: 30rem;
+    background-color: #ffb70088;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .info-slide p {
+    position: absolute;
+    top: 25%;
+    z-index: 20;
+    font-family: 'Roboto';
+    font-size: 1.15rem;
+    padding: 1rem;
+    margin: 2rem;
   }
   .content-intro h1 {
     font-size: 3rem;
@@ -415,6 +467,25 @@ footer .footer-info-text {
   }
   .flags-in-menu {
     display: none !important;
+  }
+  .info-slide {
+    background-image: url("../img/partex1.jpg");
+  }
+  .info-slide .overlay {
+    height: 30rem;
+    background-color: #ffb70088;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .info-slide p {
+    position: absolute;
+    top: 10%;
+    z-index: 20;
+    font-family: 'Roboto';
+    font-size: .8rem;
+    padding: 1rem;
+    margin: 2rem;
   }
   /*Resumen de productos recientes*/
   .title-content {
@@ -572,7 +643,7 @@ footer .footer-info-text {
   .division-link-horizontal {
     height: .25rem;
     width: 100%;
-    background-color: gold;
+    background-color: #FFB800;
   }
   .division-link {
     display: none;
@@ -582,6 +653,23 @@ footer .footer-info-text {
   }
   .info-slide {
     height: 18.1rem;
+    background-image: url("../img/partex1.jpg");
+  }
+  .info-slide .overlay {
+    height: 30rem;
+    background-color: #ffb70088;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .info-slide p {
+    position: absolute;
+    top: 10%;
+    z-index: 20;
+    font-family: 'Roboto';
+    font-size: .8rem;
+    padding: 1rem;
+    margin: 2rem;
   }
   /*Resumen de productos recientes*/
   .title-content {
@@ -653,6 +741,23 @@ footer .footer-info-text {
   }
   .info-slide {
     height: 25rem;
+    background-image: url("../img/partex1.jpg");
+  }
+  .info-slide .overlay {
+    height: 30rem;
+    background-color: #ffb70088;
+    left: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .info-slide p {
+    position: absolute;
+    top: 15%;
+    z-index: 20;
+    font-family: 'Roboto';
+    font-size: .8rem;
+    padding: 1rem;
+    margin: 2rem;
   }
 }
 
@@ -755,7 +860,7 @@ footer .footer-info-text {
   .division-link-horizontal {
     height: .25rem;
     width: 100%;
-    background-color: gold;
+    background-color: #FFB800;
   }
   .flags-in-menu {
     display: -webkit-box;
@@ -929,7 +1034,7 @@ footer .footer-info-text {
   .division-link-horizontal {
     height: .25rem;
     width: 100%;
-    background-color: gold;
+    background-color: #FFB800;
   }
   .flags-in-menu {
     display: -webkit-box;
@@ -1057,7 +1162,7 @@ footer .footer-info-text {
 .division-general-description {
   width: .4rem;
   height: 4.35rem;
-  background-color: gold;
+  background-color: #FFB800;
 }
 
 .description-content-info {

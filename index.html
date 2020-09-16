@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="css/glide.core.css">
 </head>
-<body>
+<body class="postion-relative">
 
     <header class="container-fluid position-relative header-home">
         
@@ -117,8 +117,8 @@
                       <a class="nav-link" href="#">Company</a>
                     </li>
                    
-                    <li class="nav-item px-3">
-                      <a class="nav-link" href="#">Contact us</a>
+                    <li class="nav-item px-3 contact-link" >
+                      <a class="nav-link" href="#" >Contact us</a>
                     </li>
 
                     
@@ -193,8 +193,9 @@
                             </li>
                             <li class="glide__slide">
 
-                                <div class="bg-primary w-100 info-slide d-flex align-items-center justify-content-center">
-                                    <p class="bg-white"><span class="font-weight-bold"> PARTEX HEAVY DUTY </span> , nace en Texas, USA, Con la iniciativa de ofrecer la venta de maquinaria pesada y equipos especiales,
+                                <div class="w-100 info-slide d-flex align-items-center justify-content-center position-relative">
+                                    <div class="w-100 overlay position-absolute"></div>
+                                    <p class="bg-white"><span class="font-weight-bold"> PARTEX HEAVY DUTY </span>, nace en Texas, USA, con la iniciativa de ofrecer la venta de maquinaria pesada y equipos especiales,
                                          nuevos o usados, así como también servicios de exportación de dichos equipos para América Latina, somos especialistas 
                                          en la venta y exportación de sistemas de basura, 
                                         equipos de trasporte, partes y repuestos de maquinaria pesada.
@@ -243,9 +244,9 @@
             <div class="row">
 
                 <div class="d-flex justify-content-between justify-content-md-around
-                align-items-center flex-wrap">
+                align-items-center flex-wrap cards-content">
 
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -260,7 +261,7 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -275,7 +276,7 @@
                       </div>
                     </div>
     
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -290,7 +291,7 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -305,7 +306,7 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -320,7 +321,7 @@
                       </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2">
+                    <div class="col-lg-3 col-md-4 col-sm-5 p-0 mx-3 my-2 el">
                       <div class="card bg-primary">
                         <img src="img/partex6.jpg" class="card-img-top" alt="Trucks">
                         <div class="card-body">
@@ -383,7 +384,7 @@
     </section>
 
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container py-4">
 
             <div class="row">
@@ -544,6 +545,15 @@
     </footer>
 
 
+    <div class="overlay-load bg-primary w-100 h-100" style=" display: flex; justify-content: center; align-items: center; position: absolute !important; top: 0; left:0; z-index: 100 !important; overflow: hidden; transition: opacity 1s ease-in-out;" >
+       
+        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+    </div>
+
+
 
 
 
@@ -581,6 +591,7 @@
     <script src="js/custom.js"></script>
     <!-- <script src="js/glide.esm.js"></script> -->
     <script src="js/glide.min.js"></script>
+    <script src="js/anime.min.js"></script>
     <script>
 
         
@@ -594,6 +605,38 @@
             gap: 0
         })
         glide.mount()
+
+    
+        document.querySelectorAll('.el').forEach( function(el){
+            // el.style.transition = 'all .2s ease-in'
+            el.addEventListener('mouseover', e => {
+
+                anime({
+                    targets: el,
+                    translateY: -3,
+                    duration: 500,
+                    // delay: anime.stagger(100) // increase delay by 100ms for each elements.
+                    // boxShadow: '1px 1px 10px #303030'
+                    // loop: true
+
+                });
+
+            })
+
+            el.addEventListener('mouseleave', e => {
+
+                anime({
+                    targets: el,
+                    translateY: 0,
+                    duration: 500,
+                    // delay: anime.stagger(100) // increase delay by 100ms for each elements.
+                    // boxShadow: '0 0 0 transparent'
+                    // loop: true
+                });
+
+            })
+
+        })
     
 
         

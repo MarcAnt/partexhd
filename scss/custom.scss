@@ -64,11 +64,14 @@ $enable-rounded: false;
     .division-general {
         width: .4rem;
         height: 2.6rem;
-        background-color: gold;
+        background-color: $primary;
     }
 }
  .nav-link {
      line-height: 1 !important;
+ }
+ .nav-item {
+     letter-spacing: .11rem !important;
  }
 
 
@@ -104,9 +107,13 @@ $enable-rounded: false;
     outline: none !important; 
 }
 
-// html {
-//     scroll-behavior: smooth;
+// html  {
+//     scroll-behavior: smooth; 
 // }
+
+input[type="text"], input[type="email"], textarea {
+    font-family: 'Roboto' !important; 
+}
 
 
 
@@ -139,6 +146,8 @@ $enable-rounded: false;
     font-size: 1.2rem;
 }
 
+
+
 .welcome {
     padding-top: 2.5rem; 
     display: flex; 
@@ -166,13 +175,13 @@ $enable-rounded: false;
 .division-link {
     width: .25rem;
     height: 2.5rem;
-    background-color: gold;
+    background-color: $primary;
 }
 
 .division-general {
     width: .25rem;
     height: 2.5rem;
-    background-color: gold;
+    background-color: $primary;
 }
 
 .content-social-links {
@@ -188,17 +197,40 @@ $enable-rounded: false;
 }
 
 .info-slide {
+
     height: 30rem; 
+    
+    .overlay {
+        height: 30rem; 
+        background-color: #ffb70088;
+        left: 0; 
+        top: 0; 
+        z-index: 10; 
+    }
+
+    background-image: url('../img/partex1.jpg');
 
     p {
+        position: absolute;
+        
+        top: 25%; 
+        z-index: 20; 
         font-family: 'Roboto';
         font-size: 1.15rem;
         padding: 1rem; 
-        margin: 5rem; 
+        margin: 2rem;
     }
 }
 
 /* section resumen */
+
+.el {
+    transition: all .5s all;
+}
+
+.el:hover {
+    box-shadow: 1px 1px 10px #30303033; 
+}
 
 .card {
     border-radius: unset !important; 
@@ -224,13 +256,17 @@ $enable-rounded: false;
 .exports-info {
     background-color: $primary; 
     background-image: url('../img/map.png'); 
+
+    .container .card {
+        box-shadow: 5px 5px 10px #30303033;
+    }
 }
 
 /* contact */
 
 .contact {
     background-color: #eeeeee; 
-
+    
 }
 
 .form-content {
@@ -355,6 +391,27 @@ footer {
 
     .info-slide {
         height: 30rem; 
+
+        .overlay {
+            height: 30rem; 
+            background-color: #ffb70088;
+            left: 0; 
+            top: 0; 
+            z-index: 10; 
+        }
+    
+        background-image: url('../img/partex1.jpg');
+    
+        p {
+            position: absolute;
+            
+            top: 25%; 
+            z-index: 20; 
+            font-family: 'Roboto';
+            font-size: 1.15rem;
+            padding: 1rem; 
+            margin: 2rem;
+        }
     }
 
     .content-intro {
@@ -460,6 +517,32 @@ footer {
     .flags-in-menu {
         display: none !important;
     }
+
+    .info-slide {
+        
+        .overlay {
+            height: 30rem; 
+            background-color: #ffb70088;
+            left: 0; 
+            top: 0; 
+            z-index: 10; 
+        }
+    
+        background-image: url('../img/partex1.jpg');
+    
+        p {
+            position: absolute;
+            top: 10%; 
+            z-index: 20; 
+            font-family: 'Roboto';
+            font-size: .8rem;
+            padding: 1rem; 
+            margin: 2rem;
+        }
+    }
+    
+
+
 
     /*Resumen de productos recientes*/
 
@@ -644,7 +727,7 @@ footer {
     .division-link-horizontal {
         height: .25rem;
         width: 100%;
-        background-color: gold;
+        background-color: $primary;
     }
 
     .division-link {
@@ -657,6 +740,27 @@ footer {
 
     .info-slide {
         height: 18.1rem; 
+
+        .overlay {
+            height: 30rem; 
+            background-color: #ffb70088;
+            left: 0; 
+            top: 0; 
+            z-index: 10; 
+        }
+    
+        background-image: url('../img/partex1.jpg');
+    
+        p {
+            position: absolute;
+            
+            top: 10%; 
+            z-index: 20; 
+            font-family: 'Roboto';
+            font-size: .8rem;
+            padding: 1rem; 
+            margin: 2rem;
+        }
     }
     
 
@@ -747,8 +851,32 @@ footer {
         display: none; 
     }
 
+   
+
     .info-slide {
+       
         height: 25rem; 
+
+        .overlay {
+            height: 30rem; 
+            background-color: #ffb70088;
+            left: 0; 
+            top: 0; 
+            z-index: 10; 
+        }
+    
+        background-image: url('../img/partex1.jpg');
+    
+        p {
+            position: absolute;
+            
+            top: 15%; 
+            z-index: 20; 
+            font-family: 'Roboto';
+            font-size: .8rem;
+            padding: 1rem; 
+            margin: 2rem;
+        }
     }
 
   }
@@ -850,7 +978,7 @@ footer {
         .division-link-horizontal {
             height: .25rem;
             width: 100%;
-            background-color: gold;
+            background-color: $primary;
         }
     
         .flags-in-menu {
@@ -1037,7 +1165,7 @@ footer {
     .division-link-horizontal {
         height: .25rem;
         width: 100%;
-        background-color: gold;
+        background-color: $primary;
     }
 
     .flags-in-menu {
@@ -1178,7 +1306,7 @@ footer {
 .division-general-description {
     width: .4rem;
     height: 4.35rem;
-    background-color: gold;
+    background-color: $primary;
 }
 
 .description-content-info {

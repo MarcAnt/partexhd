@@ -1,7 +1,19 @@
 
+
+/*Funcionalidad pare el overlay de cargas de paginas */
+
+document.body.style.overflow ='hidden'
+
+window.onload = function() {
+    
+    document.body.style.overflowY ='scroll'
+    document.querySelector('.overlay-load').style.opacity = 0
+    document.querySelector('.overlay-load').style.display = 'none'
+};
+
+
 document.addEventListener('DOMContentLoaded', e => {
-
-
+    
 
     const header = document.querySelector('.navbar'); 
     const btnUp = document.createElement('div')
@@ -37,12 +49,50 @@ document.addEventListener('DOMContentLoaded', e => {
 
     }
 
+    let active = true;
+
+    document.querySelectorAll('.el').forEach( function(el){
+        el.style.opacity = 0
+    });
+
     window.addEventListener('scroll', (e) => {
         //Control de botón up
         posicionScroll = window.pageYOffset;
 
-     
-        //Control del header
+        if(document.querySelector('.list-all') != null || document.querySelector('.list-all') != undefined) {
+
+            /*Animar las cards en el index*/
+
+            if(scrollY >= (document.querySelector('.list-all').offsetTop - 400 ) ) {
+                
+                if(active) {
+    
+                    active = false
+                    anime({
+                        targets: '.cards-content .el',
+                        translateY: 25,
+                        direction: 'alternate',
+                        // delay: anime.stagger(100) // increase delay by 100ms for each elements.
+                        duration: 500,
+                        delay: anime.stagger(100)
+                        // loop: true
+                    });
+                    anime({
+                        targets: '.cards-content .el',
+                        opacity: 1,
+                        // delay: anime.stagger(100) // increase delay by 100ms for each elements.
+                        duration: 300,
+                        delay: anime.stagger(100)
+                        // loop: true
+                    });
+    
+                }
+    
+            }
+        }
+        
+
+        //Control del boton para asignar el comportamiento 
         
         if(scrollY > 150) {
             // header.style.backgroundColor = 'rgba(255, 255, 255, .5)'
@@ -61,9 +111,21 @@ document.addEventListener('DOMContentLoaded', e => {
             btnUp.removeEventListener('click', controlBtnUp)
         }
 
-            
+    })
+
+    /*Scroll a la sección de contacto*/
+    document.querySelector('.contact-link').addEventListener('click', function() {
+    
+        window.scrollBy({ 
+            top: document.querySelector('.contact').offsetTop, // could be negative value
+            left: 0, 
+            behavior: 'smooth' 
+        });
 
     })
+    
+
+    /*Animaciones para los links en el menú */
 
     // ** FADE OUT FUNCTION **
     function fadeOut(el) {
@@ -138,62 +200,63 @@ document.addEventListener('DOMContentLoaded', e => {
         // do something...
     })
 
-
+    /*Animaciones y funcionalidades para el catálogo individual de un producto */
 
     const btnRight = document.querySelector('.glide__arrow--right');
     const btnLeft = document.querySelector('.glide__arrow--left');
     const divisionBar = document.querySelector('.division-selector'); 
-    let actualImg = document.querySelector('.glide__slide--active').children; 
     let selectImg = document.getElementById('img-select'); 
     let imgOnModal = document.getElementById('imgOnModal');
 
     /*Control del carousel del producto */
+    if(btnRight != null || btnRight != undefined) {
 
-    // btnRight.addEventListener('click', function(e) {
+        let actualImg = document.querySelector('.glide__slide--active').children; 
 
-    // //    console.log( document.querySelector('.glide__slide--active').style.width ); 
-    //    fadeIn(selectImg, 'block')
-    //    selectImg.src = actualImg[0].src
-       
-    // })
+        btnRight.addEventListener('click', function(e) {
     
-    // btnLeft.addEventListener('click', function(e) {
+        //    console.log( document.querySelector('.glide__slide--active').style.width ); 
+           fadeIn(selectImg, 'block')
+           selectImg.src = actualImg[0].src
+           
+        })
         
-    //     fadeIn(selectImg, 'block')
-    //     selectImg.src = actualImg[0].src
-        
-    // })
+        btnLeft.addEventListener('click', function(e) {
+            
+            fadeIn(selectImg, 'block')
+            selectImg.src = actualImg[0].src
+            
+        })
 
-
-    /* */
-    // divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
-   
-
-
-    function resizeDivison() {
-        // heightOutput.textContent = window.innerHeight;
-        // widthOutput.textContent = window.innerWidth;
-
-        // console.log(document.querySelector('.glide__slide').style.height);
-        
-
+        /* Ancho de la barra que va sobre la lista de imagenes en el catologo del producto */
         divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
+
+        function resizeDivison() {
+            // heightOutput.textContent = window.innerHeight;
+            // widthOutput.textContent = window.innerWidth;        
+    
+            divisionBar.style.width = document.querySelector('.glide__slide--active').style.width
+        }
+    
+        window.addEventListener('resize', resizeDivison);
     }
 
-    window.addEventListener('resize', resizeDivison);
+
+
 
 
     /*Abrir el modal para la descripcion del artículo */
-    // document.querySelector('.image-description').addEventListener('click', function() {
 
-    //     imgOnModal.src = selectImg.src
-    //     imgOnModal.style.width = '100%'
-       
-    //     $('#imageModal').modal('show')
-    // })
+    if(document.querySelector('.image-description') != null || document.querySelector('.image-description') != undefined ) {
 
-
-
+        document.querySelector('.image-description').addEventListener('click', function() {
+    
+            imgOnModal.src = selectImg.src
+            imgOnModal.style.width = '100%'
+           
+            $('#imageModal').modal('show')
+        })
+    }
 
 
 
